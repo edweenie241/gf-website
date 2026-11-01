@@ -1,0 +1,1263 @@
+/* ================================
+   PAGE / BACKGROUND
+================================ */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at top left, #ffd9e8, transparent 35%),
+        radial-gradient(circle at bottom right, #ffc7dc, transparent 35%),
+        linear-gradient(135deg, #fff0f5, #ffe4ee);
+
+    margin: 0;
+    padding: 40px;
+
+    position: relative;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   SMALL BACKGROUND HEARTS
+================================ */
+
+body::before {
+    content: "♥  ♡  ♥  ♡  ♥  ♡  ♥  ♡  ♥  ♡  ♥  ♡";
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 40px;
+    line-height: 120px;
+    letter-spacing: 45px;
+
+    color: #ff8fb3;
+    opacity: 0.20;
+
+    pointer-events: none;
+    z-index: -1;
+
+    overflow: hidden;
+}
+
+
+/* ================================
+   MAIN CARD
+================================ */
+
+.card {
+    background-color: rgba(255, 255, 255, 0.92);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(214, 51, 108, 0.12),
+        0 0 35px rgba(255, 180, 210, 0.15);
+
+    backdrop-filter: blur(6px);
+
+    position: relative;
+    z-index: 2;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 35px rgba(214, 51, 108, 0.16),
+        0 0 40px rgba(255, 180, 210, 0.18);
+}
+
+
+/* ================================
+   HEADINGS / TEXT
+================================ */
+
+h1,
+h2 {
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-weight: normal;
+}
+
+h1 {
+    color: #d6336c;
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   MAIN IMAGE
+================================ */
+
+.main-photo {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+
+    border-radius: 20px;
+}
+
+
+/* ================================
+   HERO VIDEO
+================================ */
+
+.hero-video {
+    width: 100%;
+    max-width: 440px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(214, 51, 108, 0.12);
+}
+
+
+/* ================================
+   MESSAGE SECTION
+================================ */
+
+.message {
+    margin-top: 30px;
+    padding: 20px;
+
+    background-color: #fff5f8;
+
+    border-radius: 15px;
+}
+
+.message h2 {
+    color: #d6336c;
+}
+
+
+/* ================================
+   MEMORIES SECTION
+================================ */
+
+.memories {
+    margin-top: 40px;
+}
+
+.memories h2 {
+    color: #d6336c;
+}
+
+.photo-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 10px 22px rgba(214, 51, 108, 0.18);
+}
+
+
+/* ================================
+   SURPRISE SECTION
+================================ */
+
+.surprise {
+    margin-top: 40px;
+}
+
+.surprise h2 {
+    color: #d6336c;
+}
+
+
+/* ================================
+   REVEAL BUTTON
+================================ */
+
+#revealButton {
+    background-color: #d6336c;
+    color: white;
+
+    border: none;
+
+    padding: 15px 25px;
+
+    font-size: 18px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(214, 51, 108, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#revealButton:hover {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 8px 20px rgba(214, 51, 108, 0.35);
+}
+
+
+/* ================================
+   HIDDEN QUESTION
+================================ */
+
+#hiddenMessage {
+    margin-top: 25px;
+    padding: 20px;
+
+    background-color: #fff5f8;
+
+    border-radius: 15px;
+}
+
+
+/* ================================
+   DATE BUTTONS
+================================ */
+
+.date-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+#yesButton,
+#notYetButton {
+    border: none;
+
+    padding: 15px 25px;
+
+    font-size: 18px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#yesButton {
+    background-color: #d6336c;
+    color: white;
+
+    box-shadow:
+        0 6px 15px rgba(214, 51, 108, 0.25);
+}
+
+#notYetButton {
+    background-color: #ff9fc4;
+    color: white;
+}
+
+#yesButton:hover,
+#notYetButton:hover {
+    transform: scale(1.05);
+}
+
+#yesButton:hover {
+    box-shadow:
+        0 8px 20px rgba(214, 51, 108, 0.35);
+}
+
+
+/* ================================
+   YES RESPONSE
+================================ */
+
+/*
+This overrides the cursive h2 font ONLY
+for the YAYYYY message.
+*/
+
+#yesMessage h2 {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    color: #d6336c;
+}
+
+#yesMessage p {
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================================
+   FUNNY RESPONSE
+================================ */
+
+#funnyMessage {
+    margin-top: 25px;
+    padding: 20px;
+
+    background-color: #fff5f8;
+
+    border-radius: 15px;
+}
+
+/*
+Also makes this response easier to read.
+*/
+
+#funnyMessage h2 {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    color: #d6336c;
+}
+
+#funnyMessage p {
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================================
+   DOG PHOTO
+================================ */
+
+.dog-photo {
+    width: 100%;
+    max-width: 350px;
+
+    margin-top: 15px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 6px 18px rgba(214, 51, 108, 0.12);
+}
+
+
+/* ================================
+   PASSCODE SCREEN
+================================ */
+
+.lock-screen {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.lock-card {
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 35px;
+    border-radius: 25px;
+    max-width: 400px;
+    width: 100%;
+
+    box-shadow:
+        0 10px 30px rgba(214, 51, 108, 0.12),
+        0 0 35px rgba(255, 180, 210, 0.15);
+
+    backdrop-filter: blur(6px);
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================================
+   PASSCODE INPUT
+================================ */
+
+#passcodeInput {
+    width: 80%;
+
+    padding: 12px;
+
+    font-size: 18px;
+
+    border: 2px solid #ffc1d6;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    margin-top: 10px;
+
+    outline: none;
+}
+
+#passcodeInput:focus {
+    border-color: #d6336c;
+
+    box-shadow:
+        0 0 8px rgba(214, 51, 108, 0.20);
+}
+
+
+/* ================================
+   UNLOCK BUTTON
+================================ */
+
+#unlockButton {
+    display: block;
+
+    margin: 20px auto 0;
+
+    background-color: #d6336c;
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    font-size: 18px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(214, 51, 108, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#unlockButton:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 8px 20px rgba(214, 51, 108, 0.35);
+}
+
+
+/* ================================
+   WRONG PASSWORD MESSAGE
+================================ */
+
+#errorMessage {
+    color: #d6336c;
+
+    margin-top: 15px;
+}
+
+
+/* ================================
+   WELCOME SCREEN
+================================ */
+
+.welcome-screen {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+
+    animation: fadeInUp 0.8s ease;
+}
+
+.welcome-screen h1 {
+    margin-bottom: 5px;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: 48px;
+
+    font-weight: normal;
+}
+
+.welcome-screen p {
+    color: #d6336c;
+
+    font-size: 30px;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+}
+
+
+/* ================================
+   LARGE DECORATIVE HEARTS
+================================ */
+
+.heart-decorations {
+    pointer-events: none;
+}
+
+.heart {
+    position: fixed;
+
+    color: #ff6f9f;
+
+    opacity: 0.45;
+
+    z-index: 0;
+
+    animation:
+        floatHeart 4s ease-in-out infinite;
+}
+
+.heart-1 {
+    top: 5%;
+    left: 3%;
+
+    font-size: 70px;
+
+    animation-delay: 0s;
+}
+
+.heart-2 {
+    top: 20%;
+    right: 4%;
+
+    font-size: 45px;
+
+    animation-delay: 0.8s;
+}
+
+.heart-3 {
+    top: 45%;
+    left: 2%;
+
+    font-size: 60px;
+
+    animation-delay: 1.4s;
+}
+
+.heart-4 {
+    bottom: 20%;
+    right: 3%;
+
+    font-size: 55px;
+
+    animation-delay: 2s;
+}
+
+.heart-5 {
+    bottom: 5%;
+    left: 5%;
+
+    font-size: 75px;
+
+    animation-delay: 2.5s;
+}
+
+.heart-6 {
+    top: 7%;
+    right: 8%;
+
+    font-size: 35px;
+
+    animation-delay: 3s;
+}
+
+
+/* ================================
+   FLOATING HEART ANIMATION
+================================ */
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotate(5deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+}
+
+
+/* ================================
+   MESSAGE ANIMATION
+================================ */
+
+@keyframes fadeInUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+.show-animation {
+    animation:
+        fadeInUp 0.8s ease;
+}
+
+
+/* ================================
+   MOBILE VERSION
+================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    #yesMessage h2 {
+        font-size: 30px;
+    }
+
+    #funnyMessage h2 {
+        font-size: 26px;
+    }
+
+    .welcome-screen h1 {
+        font-size: 38px;
+    }
+
+    .welcome-screen p {
+        font-size: 26px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-grid img {
+        height: 250px;
+    }
+
+    .date-buttons {
+        flex-direction: column;
+    }
+
+    .lock-card {
+        padding: 25px 20px;
+    }
+
+    .heart-1,
+    .heart-3,
+    .heart-5 {
+        font-size: 45px;
+    }
+}
+
+
+/* ================================
+   REDUCED MOTION
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .heart,
+    .show-animation,
+    .card,
+    .photo-grid img,
+    #revealButton,
+    #unlockButton,
+    #yesButton,
+    #notYetButton {
+
+        animation: none;
+        transition: none;
+    }
+}
+
+
+/* ================================
+   HIDDEN ELEMENTS
+
+   KEEP THIS AT THE VERY BOTTOM!
+================================ */
+
+.hidden {
+    display: none !important;
+}
+
+.secret-heart {
+    background: none;
+    border: none;
+    padding: 0;
+
+    color: #d6336c;
+    font-size: inherit;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+}
+
+.secret-heart:hover {
+    transform: scale(1.25);
+}
+
+.poem-card {
+    background-color: white;
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.poem-card h1 {
+    color: #d6336c;
+}
+
+.poem-intro {
+    color: #d6336c;
+    font-style: italic;
+}
+
+.poem {
+    margin: 30px 0;
+    padding: 25px;
+    background-color: #fff5f8;
+    border-radius: 20px;
+
+    font-family: Georgia, serif;
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+.back-button {
+    display: inline-block;
+
+    background-color: #d6336c;
+    color: white;
+
+    padding: 12px 24px;
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+}
+ .poem-card {
+    position: relative;
+    z-index: 2;
+
+    background-color: white;
+
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.poem-card h1 {
+    color: #d6336c;
+    margin-bottom: 5px;
+}
+
+.poem-intro {
+    color: #d6336c;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.poem {
+    margin: 30px 0;
+    padding: 30px;
+
+    background-color: #fff5f8;
+
+    border-radius: 20px;
+
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.poem h2 {
+    color: #d6336c;
+    margin-bottom: 30px;
+}
+
+.poem p {
+    margin-bottom: 30px;
+}
+
+.poem p:last-child {
+    margin-bottom: 0;
+}
+
+.back-button {
+    display: inline-block;
+
+    background-color: #d6336c;
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* Mobile adjustments */
+
+@media (max-width: 600px) {
+
+    .poem-card {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .poem {
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
+
+.music-selection {
+    margin-bottom: 30px;
+}
+
+#musicButton {
+    background-color: #fff5f8;
+    color: #d6336c;
+
+    border: 2px solid #ffc1d6;
+
+    padding: 12px 22px;
+
+    font-size: 16px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: tranform 0.2s ease;
+                background-color: 0.2s ease;
+}
+
+/* ========================================
+   CANCUN COUNTDOWN
+======================================== */
+
+.countdown-container {
+    margin-top: 30px;
+    padding: 25px 15px;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffe4ec
+    );
+
+    border-radius: 20px;
+
+    animation: fadeInUp 0.8s ease;
+}
+
+.countdown-container h2 {
+    color: #d6336c;
+    margin-bottom: 10px;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.time-box {
+    background: white;
+
+    padding: 15px 5px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.time-box span {
+    font-size: clamp(18px, 4vw, 30px);
+    font-weight: bold;
+    color: #d6336c;
+}
+
+.time-box small {
+    font-size: 11px;
+    color: #777;
+}
+
+#countdownFinished {
+    color: #d6336c;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* ========================================
+   SECRET POEM - VINTAGE CHILDHOOD PHOTO
+======================================== */
+
+/* Centers the photo above the poem */
+.old-memory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 30px auto 40px;
+    padding: 10px;
+
+    box-sizing: border-box;
+}
+
+/* Vintage Polaroid frame */
+.polaroid {
+    position: relative;
+
+    width: 100%;
+    max-width: 340px;
+
+    padding: 14px 14px 25px;
+    box-sizing: border-box;
+
+    background: #f5eddd;
+    border: 1px solid #e3d5bf;
+    border-radius: 5px;
+
+    box-shadow:
+        0 12px 30px rgba(75, 55, 35, 0.18),
+        inset 0 0 18px rgba(150, 110, 65, 0.08);
+
+    transform: rotate(-3deg);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Slightly straightens photo when hovered */
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+
+    box-shadow:
+        0 16px 35px rgba(75, 55, 35, 0.22);
+}
+
+/* Vintage film color filter */
+.polaroid img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    border-radius: 3px;
+
+    filter:
+        sepia(25%)
+        saturate(75%)
+        contrast(90%)
+        brightness(105%);
+
+    transition: filter 0.4s ease;
+}
+
+/* Slightly restores original colors on hover */
+.polaroid:hover img {
+    filter:
+        sepia(12%)
+        saturate(90%)
+        contrast(95%)
+        brightness(102%);
+}
+
+/* Subtle aged-film grain overlay */
+.polaroid::after {
+    content: "";
+
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    bottom: 75px;
+
+    pointer-events: none;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.25'/%3E%3C/svg%3E");
+
+    opacity: 0.16;
+    mix-blend-mode: multiply;
+
+    border-radius: 3px;
+}
+
+/* Handwritten-style caption */
+.polaroid p {
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: 21px;
+    font-style: italic;
+
+    color: #8b5e56;
+
+    text-align: center;
+
+    margin: 20px 0 0;
+}
+
+/* Keep the poem below the photo */
+.poem-page {
+    display: block;
+    width: 100%;
+}
+
+.poem-page.hidden {
+    display: none !important;
+}
+
+.poem-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 40px auto;
+    padding: 30px 20px;
+
+    box-sizing: border-box;
+}
+
+.poem {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 600px) {
+
+    .old-memory {
+        padding: 5px;
+        margin: 25px auto 35px;
+    }
+
+    .polaroid {
+        max-width: 280px;
+        padding: 10px 10px 20px;
+
+        transform: rotate(-2deg);
+    }
+
+    .polaroid::after {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 65px;
+    }
+
+    .polaroid p {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .poem-card {
+        padding: 20px 15px;
+    }
+}
+
+/* ========================================
+   FIX SECRET POEM PAGE LAYOUT
+======================================== */
+
+.poem-page {
+    display: block;
+    width: 100%;
+}
+
+.poem-page.hidden {
+    display: none !important;
+}
+
+.poem-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 40px auto;
+    padding: 30px 20px;
+
+    box-sizing: border-box;
+}
+
+.old-memory {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    margin: 25px auto 35px;
+}
+
+.polaroid {
+    width: 100%;
+    max-width: 320px;
+
+    padding: 12px 12px 20px;
+    box-sizing: border-box;
+
+    background: #fffdf9;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transform: rotate(-2deg);
+}
+
+.polaroid img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.polaroid p {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #b94b73;
+    margin: 15px 0 0;
+}
+
+.poem {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+    .poem-card {
+        padding: 20px 15px;
+    }
+
+    .polaroid {
+        max-width: 260px;
+    }
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Something Just For You ♥️</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- FLOATING HEARTS -->
+    <div class="heart-decorations">
+        <span class="heart heart-1">♡</span>
+        <span class="heart heart-2">♥</span>
+        <span class="heart heart-3">♡</span>
+        <span class="heart heart-4">♥</span>
+        <span class="heart heart-5">♡</span>
+        <span class="heart heart-6">♥</span>
+    </div>
+
+
+    <!-- PASSWORD SCREEN -->
+    <div id="lockScreen" class="lock-screen">
+
+        <div class="lock-card">
+
+            <h1>Private Access ♥️</h1>
+
+            <p>Enter the secret passcode to continue.</p>
+
+            <input
+                type="password"
+                id="passcodeInput"
+                placeholder="Enter passcode"
+            >
+
+            <button id="unlockButton">
+                Enter ♥️
+            </button>
+
+            <p id="errorMessage" class="hidden">
+                Wrong passcode 😅 Try again.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- WELCOME SCREEN -->
+    <div id="welcomeScreen" class="welcome-screen hidden">
+
+        <h1>Welcome my beautiful Princess ♥️</h1>
+
+        <p>Te amo!</p>
+
+    </div>
+
+
+    <!-- MAIN SITE -->
+    <div id="siteContent" class="hidden">
+
+
+        <!-- BACKGROUND MUSIC -->
+        <audio id="backgroundMusic" loop>
+
+            <source
+                src="audio/one-in-a-million.flac"
+                type="audio/flac"
+            >
+
+        </audio>
+
+
+        <!-- NORMAL WEBSITE -->
+        <div id="mainCard" class="card">
+
+
+            <h1>A Little Something Just For You ♥️</h1>
+
+            <p>
+                I made this little website just for you.
+            </p>
+
+
+            <!-- HERO VIDEO -->
+            <video
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+            >
+
+                <source
+                    src="images/hero.gif.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video tag.
+
+            </video>
+
+
+            <!-- MESSAGE -->
+            <div class="message">
+
+                <h2>Why I Made This 💕</h2>
+
+                <p>
+                    I wanted to make you something a little different.
+                    Something that I built myself using my own hands,
+                    just for you.
+                </p>
+
+            </div>
+
+
+            <!-- MEMORIES -->
+            <section class="memories">
+
+                <h2>
+                    Our Memories
+
+                    <button
+                        id="secretHeart"
+                        class="secret-heart"
+                    >
+                        ♥️
+                    </button>
+
+                </h2>
+
+
+                <div class="photo-grid">
+
+                    <img
+                        src="images/us-3.jpg"
+                        alt="A memory of us."
+                    >
+
+                    <img
+                        src="images/us-2.jpg"
+                        alt="Another memory of us."
+                    >
+
+                    <img
+                        src="images/us-1.jpg"
+                        alt="Another memory of us."
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- DATE SURPRISE -->
+            <div class="surprise">
+
+                <h2>There's one more thing...</h2>
+
+                <button id="revealButton">
+                    Click Me ♥️
+                </button>
+
+
+                <!-- HIDDEN DATE QUESTION -->
+                <div id="hiddenMessage" class="hidden">
+
+                    <h2>
+                        Will you go on a date with me? ♥️
+                    </h2>
+
+
+                    <div class="date-buttons">
+
+                        <button id="yesButton">
+                            Yes! ♥️
+                        </button>
+
+                        <button id="notYetButton">
+                            Not Yet... 😅
+                        </button>
+
+                    </div>
+
+
+                    <!-- YES RESPONSE -->
+                    <div id="yesMessage" class="hidden">
+
+                        <h2>YAYYYY 💕</h2>
+
+                        <p>
+                            I knew you'd make the right choice 😌♥️
+                        </p>
+<div class="countdown-container">
+
+        <h2>Our Cancun Adventure 🌴☀️</h2>
+
+        <p>
+            The Countdown to our next adventure together !
+        </p>
+        
+        <p>
+            February 13, 2027 - 5:43 AM ♥️
+        </p>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+        <p id="countdownFinished" class="hidden">
+            The wait is over! Cancun, here we come! 🌴♥️
+        </p>
+
+    </div>
+
+</div>
+
+
+                    <!-- FUNNY RESPONSE -->
+                    <div id="funnyMessage" class="hidden">
+
+                        <h2>
+                            It Was Just A Suggestion...
+                        </h2>
+
+                        <p>
+                            You're going to be my date 😭❤️‍🔥
+                        </p>
+
+                        <img
+                            class="dog-photo"
+                            src="images/dog-date-invitation.jpg"
+                            alt="Her dog looking threatening in a funny way"
+                        >
+
+                        <p>
+                            Consider this your official invitation 🐾♥️
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- END MAIN CARD -->
+
+
+        <!-- SECRET POEM PAGE -->
+        <div id="poemPage" class="poem-page hidden">
+
+            <div class="poem-card">
+
+                <h1>You Found My Secret ♥️</h1>
+
+                <p class="poem-intro">
+                    I was wondering if you'd find this.
+                </p>
+
+                <!-- OUR CHILDHOOD MEMORY -->
+<div class="old-memory">
+
+    <div class="polaroid">
+
+        <img
+            src="images/our-first-memory.jpeg"
+            alt="A special memory of us from years ago"
+        >
+
+        <p>Where our story began ♥️</p>
+
+    </div>
+
+</div>
+
+
+                <div class="poem">
+
+                    <h2>
+                        Four Years Apart, Still Us ❤️
+                    </h2>
+
+
+                    <p>
+                        Four years apart, yet somehow still together,<br>
+                        holding on through every change in weather.<br>
+                        But our story began long before these years,<br>
+                        back when we were kids, before these hopes and fears.
+                    </p>
+
+
+                    <p>
+                        Not everyone believes in where this road will end,<br>
+                        and we've heard the doubts from family and friends.<br>
+                        We've faced the distance, criticism, and pain,<br>
+                        yet somehow we keep choosing us again.
+                    </p>
+
+
+                    <p>
+                        And through it all, we've put our trust in God,<br>
+                        even when the path ahead felt long and hard.<br>
+                        Maybe we don't know exactly what comes next,<br>
+                        but I know whose hand I want to hold through it.
+                    </p>
+
+
+                    <p>
+                        Because I loved you when I first decided<br>
+                        that one day you were the woman I wanted to marry.<br>
+                        I love you now, after everything we've been through,<br>
+                        and somehow every year makes me more certain of you.
+                    </p>
+
+
+                    <p>
+                        We're not there yet, but we're getting so close.<br>
+                        Closer to the life we've talked about the most.<br>
+                        No more counting miles or wishing you were near,<br>
+                        just waking up together year after year.
+                    </p>
+
+
+                    <p>
+                        And I'm impatient—I won't even pretend.<br>
+                        I want our home, our family, and everything ahead.<br>
+                        I want to spoil you more than you'll ever let me,<br>
+                        and spend my life finding new ways to make you happy.
+                    </p>
+
+
+                    <p>
+                        We've already made it through so much apart.<br>
+                        Imagine what we'll do when distance isn't part<br>
+                        of the story anymore—just you and me, together,<br>
+                        finally beginning the rest of our forever. ❤️
+                    </p>
+
+                </div>
+
+
+                <!-- RETURN TO MAIN WEBSITE -->
+                <button
+                    id="backFromPoem"
+                    class="back-button"
+                >
+                    ← Back to us ♥️
+                </button>
+
+            </div>
+
+        </div>
+        <!-- END SECRET POEM -->
+
+
+    </div>
+    <!-- END SITE CONTENT -->
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
